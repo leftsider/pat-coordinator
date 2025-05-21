@@ -1,10 +1,87 @@
-# Node
-node_modules/
-build/
-.env
+# ================================================
+# Project-Wide Ignore Rules
+# ================================================
 
-# Python
-__pycache__/
-*.pyc
-venv/
-env/
+# Node.js
+**/node_modules/
+**/package-lock.json
+**/yarn.lock
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnp*
+**/.yarn-integrity
+
+# React (Frontend)
+frontend/.env
+frontend/build/
+frontend/.cache/
+frontend/coverage/
+frontend/.eslintcache
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Express/Node (Backend)
+backend/.env
+backend/dist/
+backend/coverage/
+backend/.nyc_output/
+
+# PostgreSQL Database
+*.pgsql
+*.sql
+*.dump
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Generated Files
+*.pdf
+*.log
+*.tmp
+*.swp
+
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing
+/junit.xml
+/coverage/
+/test-results.xml
+
+# Build Output
+dist/
+build/
+out/
+.cache/
+.next/
+
+# ================================================
+# Stack-Specific Rules
+# ================================================
+
+# Auth0 Local Development
+auth0_session.json
+auth0_cache/
+
+# PDFKit Temporary Files
+pdfkit_tmp/
+
+# Docker (optional)
+docker-compose.override.yml
+**/docker-data/
