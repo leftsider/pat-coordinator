@@ -9,4 +9,29 @@ This project is a web application to help coordinate stays, manage documentation
 - `/docs` — Documentation and planning
 
 ## Getting Started
-Steps to come...
+### Frontend (React + Vite)
+
+#### Setup
+1. Install dependencies:
+`cd frontend`
+`npm install`
+
+2. Copy `.env.example` to `.env` and fill in your values.
+
+#### Development
+Start the Vite dev server:
+`npm run dev`
+
+The app will be available at [http://localhost:5173](http://localhost:5173) by default.
+
+#### Build
+Create a production build:
+`npm run build`
+
+The output will be in the `dist/` folder.
+
+#### Preview Production Build
+Serve the production build locally:
+`npm run serve`
+
+
