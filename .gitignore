@@ -29,6 +29,9 @@ backend/dist/
 backend/coverage/
 backend/.nyc_output/
 
+# GCP / OAuth
+backend/credentials/
+
 # PostgreSQL Database
 *.pgsql
 *.sql
