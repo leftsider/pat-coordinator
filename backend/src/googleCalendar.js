@@ -2,12 +2,17 @@ const { google } = require('googleapis');
 const fs = require('fs');
 const path = require('path');
 
+// Use __dirname to resolve the path relative to this file
+const CREDENTIALS_PATH = path.join(__dirname, '../credentials/google-calendar.json');
+const credentials = JSON.parse(fs.readFileSync(CREDENTIALS_PATH));
+
+
 // Path to your credentials and token files
 const CREDENTIALS_PATH = path.join(__dirname, '../credentials/google-calendar.json');
 const TOKEN_PATH = path.join(__dirname, 'tokens.json');
 
 // Load client secrets from a local file.
-const credentials = JSON.parse(fs.readFileSync('credentials/google-calendar.json'));
+const credentials = JSON.parse(fs.readFileSync('../credentials/google-calendar.json'));
 const { client_id, client_secret, redirect_uris } = credentials.installed || credentials.web;
 
 // Scopes for Google Calendar API
