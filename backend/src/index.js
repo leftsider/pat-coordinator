@@ -13,8 +13,10 @@ app.use(express.json());
 // 1. Start OAuth2 flow
 app.get('/auth/google', (req, res) => {
   const url = getAuthUrl();
+  console.log('Redirecting to:', url);
   res.redirect(url);
 });
+
 
 // 2. OAuth2 callback
 app.get('/auth/google/callback', async (req, res) => {
